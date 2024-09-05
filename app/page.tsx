@@ -19,22 +19,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="p-4 font-sans">
-      <div
-        ref={imageMoveContainerRef}
-        className="relative cursor-crosshair overflow-hidden"
-        style={{
-          width: "600px",
-          height: "400px",
-        }}
-      >
-        <NextImage
-          fill
-          sizes="(min-width: 1024px) 66vw, 100vw"
-          alt="Mountains"
-          src={mountains}
-          priority={true}
-        />
+    <div className="w-full m-8">
+      <div className="relative aspect-square h-full max-h-[400px] max-w-[600px] w-full overflow-hidden">
+        <div
+          ref={imageMoveContainerRef}
+          className="relative cursor-crosshair overflow-hidden h-full w-full"
+        >
+          <NextImage
+            fill
+            sizes="(min-width: 1024px) 66vw, 100vw"
+            alt="Mountains"
+            src={mountains}
+            priority={true}
+          />
+        </div>
       </div>
     </div>
   );
